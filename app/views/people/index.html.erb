@@ -3,8 +3,10 @@
 <h2><%= link_to "Create New Person", new_person_path%></h2>
 <% @people.each do |person| %>
 <h2>  <%= person.last_name %>, <%= person.first_name %> </h2>
-<h4> <%= link_to "Contact Details", person_path(person.id)%>
-<h4> <%= link_to "Edit Contact", edit_person_path(person.id)%> </h4>
-<h4> <%= link_to "Delete Contact", person_path(person.id), method: :delete %> </h4>
+<ul>
+<li> <%= link_to "Contact Details", person_path(person.id)%> </li>
+<li> <%= link_to "Edit Contact", edit_person_path(person.id)%> </li>
+<li> <%= link_to "Delete Contact", person_path(person.id), method: :delete %> </li>
+</ul>
 <%end%>
 <p></p>
